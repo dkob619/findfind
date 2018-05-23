@@ -3,7 +3,7 @@
 *.python
 __pycache__
 myvenv
-db.sqlite
+db.sqlite3
 /static
 .DS_Store
 
