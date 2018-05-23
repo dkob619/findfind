@@ -1,0 +1,2 @@
+{{ object.Main_job_description }}
+{{ object.City_or_Town }}

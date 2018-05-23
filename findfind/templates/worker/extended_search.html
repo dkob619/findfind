@@ -1,0 +1,31 @@
+{% if worker_desc.count > 0 %}
+
+{% for worker in worker_desc  %}
+<div><a href="{% url 'worker_details' worker.id  %}"> {{ worker.first_name|capfirst }} {{ worker.last_name|capfirst }}  =>  {{ worker.Main_job_description|capfirst }} </a><div>
+{% endfor %}
+
+{% else %}
+<li>Nothing to Show!! </li>
+
+{% endif %}
+
+{% block sidebar %}
+ 	<p><a href="{% url 'workers_list' %}	">Show all</a></li>
+ 	<p><a href="{% url 'worker_new' %}	">New Worker</a></li>
+ 	<p><a href="{% url 'worker_search' %}	">Search</a> </li>
+
+
+ 	<h3>Extended search</h3>
+ 	{% csrf_token %}
+ 	Region : <input type="text" id="reg_search" name="reg_search">
+ 	City : <input type="text" id="cty_search" name="cty_search">
+ 	Worker : <input type="text" id="wkr_search" name="wkr_search">
+
+	<p>Results Here.....</p>
+
+ 	<div id='search-results'>
+
+ 	</div>
+
+<h3> Search >> This would be chaged to quick search... Don't forget to do the explicit Search Page as well </h3>
+ {% endblock %}

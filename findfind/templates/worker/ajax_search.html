@@ -1,0 +1,24 @@
+{# if worker_region.count and worker_city.count and  worker_desc.count > 0 #}
+{% if workers.count > 0 %}
+
+
+
+
+{% for worker in workers %}
+
+
+<p class="lead"><a href="{{ worker.object.get_absolute_url }}" > {{ worker.object.first_name|capfirst }} {{ worker.object.last_name|capfirst }}  ||  {{ worker.object.City_or_Town|capfirst }} || {{ worker.object.Main_job_description|capfirst }} || {{ worker.object.Region|capfirst }} || </a></p>
+{% endfor %}
+
+
+
+{% else %}
+<p class="lead">Nothing to Show!! </p>
+
+{% endif %}
+
+{% comment %}
+All this crap would not show up on the templating site..
+{% endcomment %}
+
+

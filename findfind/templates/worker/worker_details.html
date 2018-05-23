@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+
+
+
+
+ {% block sidebar %}
+ 	<p><a href="{% url 'workers_list' %}	">Show all</a></li>
+ 	<p><a href="{% url 'worker_new' %}	">New Worker</a></li>
+ 	<p><a href="{% url 'worker_search' %}	">Search</a> </li>
+
+<h3> Search >> This would be chaged to quick search... Don't forget to do the explicit Search Page as well </h3>
+ {% endblock %}
+
+ Don't forget to do a lot more research about the logical controls of the templating tags and the django=database filtering ORM together with jquery's onclick and onkeypress event handlers 
+
+
+
+
+
+
+
+
+
+
+
+
+{% block content %}
+	<a href="{% url 'workers_list' %}"> Back to Hompage </a>
+
+
+	{% if worker.profile_Picture %}
+
+	<p><img src="{{ MEDIA_URL }}{{ worker.profile_Picture }}"   alt="Default Profile Picture" width="200"></p>
+
+	{% endif %}
+
+	<h3 class="lead">Name: {{ worker.first_name }} {{ worker.last_name }}</h3>
+	<h4 class="lead">Age: {{ worker.age }}</h4>
+	<h4 class="lead">Gender: {{ worker.gender }}</h4>
+	<h4 class="lead">Contact: {{ worker.Call_Number }}</h4>
+	{% if worker.WhatsApp %}
+	<h4 class="lead">WhatsApp: {{ worker.WhatsApp }}</h4>
+	{% endif %}
+	<h4 class="lead">Main Job Description: {{ worker.Main_job_description }}</h4>
+	{% if worker.Other_jobs_description %}
+	<h4 class="lead">Other Job Descriptions: {{ worker.Other_jobs_description }}</h4>
+	{% endif %}
+	<h4 class="lead">Region: {{ worker.Region }}</h4>
+	<h4 class="lead">City: {{ worker.City_or_Town }}</h4>
+	<h4 class="lead">About Me: {{ worker.bio|truncatewords:"4" }}</h4>
+	
+	<h4 class="lead">Joined on: {{ worker.date_joined|date:"D d M Y" }}</h4>
+	
+
+
+	<h3 class="lead">{{ worker.likes }} pe{{ worker.likes|pluralize:"rson,ople" }} liked this</h3>
+
+	<p><a href="{% url 'worker_likes' worker.id %}"  class="btn btn-info">like</a></p>
+
+	<h2 class="lead"> Comments </h2>
+
+	{% for c in worker.comment_set.all %}
+	<p class="lead"> {{ c.name }} => {{ c.message }}</p>
+	{% endfor %}
+
+	<p class="lead"><a href="{% url 'worker_add_comment' worker.id %}" class="btn btn-success btn-lg"> Add Comment ! </a></p>
+
+
+{% endblock %}
+
+
+

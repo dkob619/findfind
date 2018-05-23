@@ -1,0 +1,202 @@
+[
+{
+    "model": "worker.worker",
+    "pk": 1,
+    "fields": {
+        "first_name": "Benjamin",
+        "last_name": "DeCosty",
+        "age": 18,
+        "gender": "M",
+        "Call_Number": "0244536568",
+        "WhatsApp": "",
+        "Main_job_description": "Painter",
+        "Other_jobs_description": "",
+        "Region": "GA",
+        "City_or_Town": "Swerdru",
+        "bio": "this is to test something",
+        "profile_Picture": "",
+        "date_joined": "2018-02-01T02:06:37.059Z",
+        "likes": 13
+    }
+},
+{
+    "model": "worker.worker",
+    "pk": 2,
+    "fields": {
+        "first_name": "Benjamin",
+        "last_name": "DeCosty",
+        "age": 18,
+        "gender": "M",
+        "Call_Number": "0244536568",
+        "WhatsApp": "",
+        "Main_job_description": "Painter",
+        "Other_jobs_description": "",
+        "Region": "GA",
+        "City_or_Town": "Swerdru",
+        "bio": "this is to test for something!!",
+        "profile_Picture": "",
+        "date_joined": "2018-02-01T02:07:27.631Z",
+        "likes": 5
+    }
+},
+{
+    "model": "worker.worker",
+    "pk": 3,
+    "fields": {
+        "first_name": "Benjamin",
+        "last_name": "Henaku",
+        "age": 18,
+        "gender": "M",
+        "Call_Number": "0244536568",
+        "WhatsApp": "",
+        "Main_job_description": "Painter",
+        "Other_jobs_description": "",
+        "Region": "GA",
+        "City_or_Town": "Swerdru",
+        "bio": "this is to test for something!!",
+        "profile_Picture": "",
+        "date_joined": "2018-02-01T02:09:43.889Z",
+        "likes": 4
+    }
+},
+{
+    "model": "worker.worker",
+    "pk": 4,
+    "fields": {
+        "first_name": "Owuraku",
+        "last_name": "DeCosty",
+        "age": 22,
+        "gender": "M",
+        "Call_Number": "0272131293",
+        "WhatsApp": "",
+        "Main_job_description": "Mason",
+        "Other_jobs_description": "",
+        "Region": "GA",
+        "City_or_Town": "Alajo",
+        "bio": "The best painter in Ghana..",
+        "profile_Picture": "",
+        "date_joined": "2018-02-01T12:50:26.125Z",
+        "likes": 12
+    }
+},
+{
+    "model": "worker.worker",
+    "pk": 5,
+    "fields": {
+        "first_name": "Herbet",
+        "last_name": "Owuraku",
+        "age": 27,
+        "gender": "M",
+        "Call_Number": "0272131293",
+        "WhatsApp": "",
+        "Main_job_description": "Mason",
+        "Other_jobs_description": "",
+        "Region": "GA",
+        "City_or_Town": "Alajo",
+        "bio": "I am the best Mason in Ghana",
+        "profile_Picture": "",
+        "date_joined": "2018-02-01T12:53:33.146Z",
+        "likes": 0
+    }
+},
+{
+    "model": "worker.worker",
+    "pk": 6,
+    "fields": {
+        "first_name": "nameTest1",
+        "last_name": "surnameTest1",
+        "age": 18,
+        "gender": "M",
+        "Call_Number": "0246468454",
+        "WhatsApp": "",
+        "Main_job_description": "Hair Dresser",
+        "Other_jobs_description": "",
+        "Region": "GA",
+        "City_or_Town": "Prampram",
+        "bio": "The best Ghana has ever seen!",
+        "profile_Picture": "uploaded_files/1526224166_121378_2r4y7XdO.jpg",
+        "date_joined": "2018-05-13T15:09:26.131Z",
+        "likes": 1
+    }
+},
+{
+    "model": "worker.worker",
+    "pk": 7,
+    "fields": {
+        "first_name": "nameTest2",
+        "last_name": "surnameTest2",
+        "age": 18,
+        "gender": "M",
+        "Call_Number": "0256845645",
+        "WhatsApp": "",
+        "Main_job_description": "Dee Jay",
+        "Other_jobs_description": "",
+        "Region": "UE",
+        "City_or_Town": "Bolgatanga",
+        "bio": "The best DJ Ghana has ever seen!",
+        "profile_Picture": "uploaded_files/1526224506_309205_IMG-20160501-WA0016.jpg",
+        "date_joined": "2018-05-13T15:15:06.320Z",
+        "likes": 0
+    }
+},
+{
+    "model": "worker.worker",
+    "pk": 8,
+    "fields": {
+        "first_name": "nameTest3",
+        "last_name": "surnameTest3",
+        "age": 18,
+        "gender": "M",
+        "Call_Number": "0586256454",
+        "WhatsApp": "",
+        "Main_job_description": "Sound Producer",
+        "Other_jobs_description": "",
+        "Region": "UE",
+        "City_or_Town": "Bolgatanga",
+        "bio": "The best Producer Ghana has ever seen!",
+        "profile_Picture": "uploaded_files/1526224695_353082_2622b0b1b4b5e6753d5376c4b1aeac7a.jpg",
+        "date_joined": "2018-05-13T15:18:15.362Z",
+        "likes": 3
+    }
+},
+{
+    "model": "worker.worker",
+    "pk": 9,
+    "fields": {
+        "first_name": "nameTest4",
+        "last_name": "surnameTest4",
+        "age": 18,
+        "gender": "M",
+        "Call_Number": "0254654565",
+        "WhatsApp": "",
+        "Main_job_description": "Car Washer",
+        "Other_jobs_description": "",
+        "Region": "AS",
+        "City_or_Town": "Ofinso",
+        "bio": "The Best inside Oseikrom",
+        "profile_Picture": "uploaded_files/1526301615_683186_IMG-20160511-WA0019.jpg",
+        "date_joined": "2018-05-14T12:40:15.698Z",
+        "likes": 0
+    }
+},
+{
+    "model": "worker.worker",
+    "pk": 10,
+    "fields": {
+        "first_name": "nameTest5",
+        "last_name": "surnameTest5",
+        "age": 36,
+        "gender": "F",
+        "Call_Number": "0254645454",
+        "WhatsApp": "",
+        "Main_job_description": "Gym Trainer",
+        "Other_jobs_description": "",
+        "Region": "WR",
+        "City_or_Town": "Takoradi",
+        "bio": "If you wanna loose weight and gain abs, Kindly contact me.",
+        "profile_Picture": "uploaded_files/1526305144_534535_IMG-20170415-WA0007.jpg",
+        "date_joined": "2018-05-14T13:39:04.545Z",
+        "likes": 0
+    }
+}
+]

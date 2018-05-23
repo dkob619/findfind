@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+	<h2> Hi, {{firstname}} {{surname}} You're Now logged in!</h2>
+	<h3>Please Don't forget your username: "{{username}}", and your password to continue surfing this website. </h3>
+	<h3>Is >>> {{email}} <<< your correct e-mail address?<br> If not kindly let us know. <br>Thank you </h3>
+
+	<p></p>
+	<p> Click <a href="{% url 'logout' %}">Here</a> to logout.</p>
+	<br>
+	<p>Click <a href="{% url 'user_profile' %}"> Here </a> To edit your profile Informations</p>
+
+{% endblock %}

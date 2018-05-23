@@ -1,0 +1,29 @@
+{% load static %}
+{% load bootstrap3 %}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>FindFind</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+	<link rel="stylesheet" href="{% static 'css/style.css' %}">
+	
+</head>
+<body>
+	{% block sidebar %}
+	
+
+	{% endblock sidebar %}
+
+	{% block content %}
+	
+	{% endblock content %}
+	<img src="{% static 'images/a.jpg' %}" alt="logo" width="250px" align="center">
+
+	<script src="{% static 'js/jquery-3.2.1.min.js' %}" ></script>
+	<script src="{% static 'js/bootstrap.min.js' %}" ></script>
+	<script src="{% static 'js/script.js' %}" ></script>
+	<script src="{% static 'js/ajax.js' %}" ></script>
+</body>
+</html>

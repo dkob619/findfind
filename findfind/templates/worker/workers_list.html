@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+
+
+
+{% block sidebar %}
+
+ 	<p><a href="{% url 'worker_new' %}	">New Worker</a></li>
+ 	<p><a href="{% url 'worker_search' %}	">Search</a> </li>
+
+
+ 	<h3>Quick search</h3>
+ 	{% csrf_token %}
+
+ 	
+ 	Worker : <input type="text" id="wkr_search" name="wkr_search">
+
+	<p>Results Here.....</p>
+
+ 	<div id='search-results'>
+
+ 	</div>
+
+<h3> Search >> This would be chaged to quick search... Don't forget to do the explicit Search Page as well </h3>
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% block content %}
+
+	
+
+	<h3 class="lead">Workers On This Platform</h3>
+	<div>
+		{% for worker in workers %}
+		<p>
+			<a href="{% url 'worker_details' worker.id %}">
+				<p class="lead">{{ worker.first_name|capfirst }} {{ worker.last_name|capfirst }}</p>
+				{% if worker.profile_Picture %}
+					<p><img src="{{ MEDIA_URL }}{{ worker.profile_Picture }}"   alt="Default Profile Picture" width="100"></p>
+				{% endif %}
+				
+			</a>
+			<p>{{ worker.likes }} pe{{ worker.likes|pluralize:"rson,ople" }} liked this</p>
+		</p>
+		{% endfor %}
+	</div>
+	
+{% endblock %}
