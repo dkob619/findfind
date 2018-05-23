@@ -8,7 +8,7 @@ class WorkerIndex(indexes.SearchIndex, indexes.Indexable):
 	date_joined = indexes.DateTimeField(model_attr='date_joined')
 
 	content_auto = indexes.EdgeNgramField(model_attr='Main_job_description')
-	#content_auto = indexes.EdgeNgramField(model_attr='City_or_Town')
+	
 
 
 	def get_model(self):

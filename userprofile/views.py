@@ -21,6 +21,7 @@ def user_profile(request):
 		form = UserProfileForm(instance=profile)
 
 	return render(request, 'userprofile/profile.html', {
+			
 			'form':form,
 
 			})
