@@ -74,7 +74,7 @@ class Worker(models.Model):
 	
 
 	def get_absolute_url(self):
-		return 'workers/get/%i' % self.id
+		return 'worker/%i' % self.id
 
 	def get_profile_picture(self):
 
@@ -99,8 +99,20 @@ class Comment(models.Model):
 
 
 
+class Proof(models.Model):
+	image_description = models.CharField(max_length=100)
+	image = models.FileField(upload_to=get_upload_file_name)
+	likes = models.IntegerField(default=0)
+	posted_on = models.DateTimeField('Date Posted')
+	worker = models.ForeignKey('Worker', on_delete=models.CASCADE)
 
 
+	def get_profile_picture(self):
+		image = str(self.image)
+		if not settings.DEBUG:
+			image = image.replace('assets/', '')
+
+		return image
 
 
 

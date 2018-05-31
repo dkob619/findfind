@@ -1,5 +1,5 @@
 from django import forms
-from . models import Worker, Comment
+from . models import Worker, Comment, Proof
 
 
 
@@ -25,3 +25,10 @@ class CommentForm(forms.ModelForm):
 	class Meta:
 		model = Comment
 		fields = ('name','message')
+
+
+class ProofForm(forms.ModelForm):
+
+	class Meta: 
+		model = Proof
+		fields = ('image_description','image')

@@ -8,10 +8,8 @@ from django.contrib.auth.models import User
 
 #django formtools 
 from formtools.wizard.views import SessionWizardView
+import smtplib
 from django.core.mail import send_mail
-import logging
-logr = logging.getLogger(__name__)
-
 
 
 #from django.urls import reverse
@@ -103,7 +101,7 @@ class ContactWizard(SessionWizardView):
 
 
 
-	def done(self, form_list, **kwds):
+	def done(self, form_list, **kwargs):
 		form_data = process_form_data(form_list)
 
 		return render(request, 'accounts/done.html', {
@@ -113,16 +111,11 @@ class ContactWizard(SessionWizardView):
 
 
 def process_form_data(form_list):
-	form_data = [form for form in form_list]
-
-	#logr.debug(form_data[0]['full_name'])
-	#logr.debug(form_data[1]['contact'])
-	#logr.debug(form_data[2]['email'])
-
+	form_data = [form.cleaned_data for form in form_list]
 
 	send_mail(
 		form_data[0]['full_name'],
-		form_data[1]['contact'],
+		form_data[1]['phone'],
 		form_data[2]['email'],
 
 		['dkob619@gmail.com'],

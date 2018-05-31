@@ -34,7 +34,7 @@ class ContactForm1(forms.Form):
 
 
 class ContactForm2(forms.Form):
-	contact = forms.CharField(max_length=10)
+	phone = forms.CharField(max_length=10)
 
 
 class ContactForm3(forms.Form):

@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+
+
+{% block content %}
+	<p><a href="{% url 'worker_details' worker.id %}"> Return to Profile </a></p>
+	<h2 class="text-info"> Proof Of Work </h2>
+
+	{% for p in worker.proof_set.all %}
+		<p class="text-danger text-uppercase h3"> {{ p.image_description|capfirst }}  <p>
+	 <p><a href="{{ MEDIA_URL }}{{ p.image }}"> <img src="{{ MEDIA_URL }}{{ p.image }}" alt="Proof of Work Image" width="250" class="img-responsive img-thumbnail" ></a></p>
+	
+	{# comment #}
+	
+	{# endcomment #}
+	{% endfor %}
+
+	
+
+
+
+{% endblock %}
+
+
+
+<!--<p><a href="{% url 'worker_proof_like' worker.id %}"  class="btn btn-info">like</a> || <a href="{% url 'worker_proof_unlike' worker.id %}"  class="btn btn-danger"> Unlike </a></p>
+	<h3 class="lead">{{ p.likes }} pe{{ worker.likes|pluralize:"rson,ople" }} liked this</h3>
+	</p>-->

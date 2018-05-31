@@ -2,8 +2,56 @@
 
 
 {% block content %}
-<h2>Register As A New User </h2>
 
+<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+			
+				<div class="login">
+
+					{% if messages %}
+					<ul>
+						{% for message in messages %}
+						<li>{{message}}</li>
+						{% endfor %}
+					</ul>
+					{% endif %}
+
+					<h1 class="text-info">Create An Account on this Platform </h1>
+					<form action="/accounts/register_user/" method="post">{% csrf_token %}
+
+
+					<table>
+					{{form}}
+					<tr>
+						<td></td>
+						<td><input type="submit" value="Register" name="submit" class="btn btn-primary"> <input type="reset" value="Cancel" name="Cancel" class="btn btn-danger"></td>
+						
+						
+					</tr>
+					<tr>
+					<td></td>
+
+					<td class="lead">Already have an account? Sign in <a href="{% url 'login' %}"> Here</a></td>
+						
+					</tr>
+
+					</table>
+					</form>
+			  	</div>
+
+
+				
+			</div>
+		</div>
+	</div>
+
+
+
+
+
+
+{% endblock %}
 
 
 <div class="login">
@@ -30,5 +78,3 @@
 </table>
 </form>
 </div>
-
-{% endblock %}

@@ -31,7 +31,7 @@ urlpatterns = [
 
 
      #User Auth Urls
-    url(r'^accounts/login/$', site_wide_views.login, name="login" ),
+    url(r'^$', site_wide_views.login, name="login" ),
     url(r'^accounts/auth/$', site_wide_views.auth_view, name="auth_view" ),
     url(r'^accounts/logout/$', site_wide_views.logout, name="logout" ),
     url(r'^accounts/loggedin/$', site_wide_views.loggedin, name="loggedin" ),
@@ -39,7 +39,7 @@ urlpatterns = [
     url(r'^accounts/register_user/$', site_wide_views.register_user, name="register_user" ),
     url(r'^accounts/register_success/$', site_wide_views.register_success, name="register_success" ),
     #contact Us
-    url(r'^accounts/contact/$', ContactWizard.as_view([ContactForm1, ContactForm2, ContactForm3]), name="contact_us"),
+    url(r'^accounts/contact/$', ContactWizard.as_view([ContactForm1, ContactForm2, ContactForm3])),
 
 
 

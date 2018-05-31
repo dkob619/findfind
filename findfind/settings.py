@@ -26,9 +26,20 @@ SECRET_KEY = '-=qo8%s)y%qhp-y7id)l&12ty^lwu5-49_ozi*-q#%ha&4b3-3'
 DEBUG = True
 
 ALLOWED_HOSTS = []
-#SMTP MAIL DEFINITIONS
 
-EMAIL_HOST = ''
+
+#SMTP MAIL DEFINITIONS
+SMPTSSL= True
+SMTP_ENABLED = True
+EMAIL_USE_TSL = True
+#EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+#DEFAULT_FROM_EMAIL = 'dkob619@gmail.com'
+#SERVER_EMAIL = 'dkob619@gmail.com'
+EMAIL_HOST = 'smtp.gmail.com'
+#EMAIL_HOST_USER = 'dkob619@gmail.com'
+#EMAIL_HOST_PASSWORD = 'Codeliskyh8'
+EMAIL_PORT = 587
+
 
 
 
@@ -43,6 +54,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'crispy_forms',
+    'bootstrapform',
     'bootstrap3',
     'worker',
     'formtools',
@@ -149,7 +162,7 @@ STATICFILES_DIRS = (
 AUTH_PROFILE_MODULE = 'userprofile.UserProfile'
 
 
-#whoosh backend for haystack
+#whoosh backend for haystack search
 WHOOSH_INDEX = os.path.join(BASE_DIR, 'whoosh/')
 
 HAYSTACK_CONNECTIONS = {
@@ -159,11 +172,18 @@ HAYSTACK_CONNECTIONS = {
     },
 }
 
+#Custom Delete Message
+
+DELETE_MESSAGE = 50
+
+MESSAGE_TAGS = {
+    DELETE_MESSAGE: 'deleted',
+}
 
 
-
-
-
+CRISPY_TEMPLATE_PACK = 'bootstrap3'
+packages=["simple_history", "simple_history.templatetags",
+"simple_history.management", "simple_history.management.commands"],
 
 
 

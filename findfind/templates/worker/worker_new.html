@@ -4,18 +4,20 @@
 {% block content %}
 <div class="container">
 <div class="row">
-<div class="col-sm-2">
-<h1 class="h2">New Worker</h1>
-<form method="POST" class="post-form" action="/worker/new/" enctype="multipart/form-data" >{% csrf_token %}
+<div class="col-md-10">
+<h1 class="h1">New Worker</h1>
+<br><br>
+<form method="POST" class="post-form" action="/worker/new/" enctype="multipart/form-data" class="form-control" >{% csrf_token %}
 {{ form.as_p }}
 
 
 
 <button type="submit" class="save btn btn-de
-fault"> Save
+fault btn-lg "> Save
+</button>  <button type="refresh" class="save btn btn-de
+fault btn-lg "> Cancel
 </button>
-
-</form>
+<br><br><br><br><br>
 </div>
 </div>
 </div>

@@ -6,8 +6,10 @@ from . models import Worker
 class WorkerIndex(indexes.SearchIndex, indexes.Indexable):
 	text = indexes.CharField(document=True, use_template=True)
 	date_joined = indexes.DateTimeField(model_attr='date_joined')
-
+	
 	content_auto = indexes.EdgeNgramField(model_attr='Main_job_description')
+
+	
 	
 
 

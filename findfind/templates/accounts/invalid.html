@@ -3,10 +3,19 @@
 
 {% block content %}
 
-	<h2>Your login details are invalid !!</h2>
-	<p>
-		click <a href="{% url 'login' %}">here</a> to login again.
-	</p>
-
+	<div class="container">
+		<div class="row">
+			<div class="col-md-4">
+			<h2 class="text-warning">Sorry, your login details are invalid !!</h2>
+				<p class="lead">
+					click <a href="{% url 'login' %}">here</a> to login again. <span class="glyphicon glyphicon-ok	">
+						
+					</span>
+				</p>
+				
+			</div>
+		</div>
+	</div>
 
 {% endblock %}
+

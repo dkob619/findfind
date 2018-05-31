@@ -1,3 +1,42 @@
 h1 {
-	color:red;
+	color:green;
+}
+
+
+.messages  {
+	background-color: #c0c0c0;
+	color:#fff;
+	padding: 1em;
+}
+
+.success  {
+	background-color: #008800;
+	color:#005500;
+	padding: 1em;
+}
+
+.deleted  {
+	background-color: #880000;
+	color:#550000;
+	padding: 1em;
+}
+
+.social_media section{
+	text-align: center;
+}
+#the_footer{
+	text-align: center;
+	background: -webkit-radial-gradient(center, circle, 
+		#EB1414  0%,  #528FDA 100%);
+	color: white;
+}
+
+
+
+@media (max-width: 767px) {
+	.img-responsive{
+		max-width: 50%;
+		min-width: 200px;
+	}
+	
 }

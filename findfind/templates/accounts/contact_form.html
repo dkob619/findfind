@@ -3,7 +3,7 @@
 {% block content %}
 <h2>Contact US</h2>
 
-<p>Step {{ wizard.steps.step1 }} of {{ wizard.steps.count }}</p>
+<p class="h2">Step {{ wizard.steps.step1 }} of {{ wizard.steps.count }}</p>
 {% for field in form %}
 	{{ field.error }}
 {% endfor %}
@@ -26,17 +26,17 @@
 
 
 {% if wizard.steps.prev %}
-<button name="wizard_goto_step" type="submit" value="{{ wizard.steps.first }}">
+<button name="wizard_goto_step" type="submit" value="{{ wizard.steps.first }}" class="btn btn-default">
 first step	
 </button>
 
-<button name="wizard_goto_step" type="submit" value="{{ wizard.steps.prev }}">
+<button name="wizard_goto_step" type="submit" value="{{ wizard.steps.prev }}" class="btn btn-default">
 prev step	
 </button>
 
 {% endif %}
 
-<input type="submit" value="Next">
+<input type="submit" value="Next" class="btn btn-default">
 
 
 </form>
